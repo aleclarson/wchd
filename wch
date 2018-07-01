@@ -1,0 +1,52 @@
+#!/usr/bin/env node
+
+let slurm = require('slurm')
+let path = require('path')
+let log = require('lodge')
+let wch = require('wch')
+
+// Ensure ~/.wch exists
+let {WCH_DIR} = require('./paths')
+require('fsx').writeDir(WCH_DIR)
+
+let args = process.argv
+
+// Helper functions
+Object.assign(global, {
+  good(label, ...args) {
+    log(log.lgreen(label), ...args)
+  },
+  warn(msg, ...args) {
+    console.warn(log.lyellow(msg), ...args)
+  },
+  fatal(err) {
+    if (args.includes('-v') || process.env.VERBOSE == '1') {
+      if (typeof err == 'string') {
+        err = new Error(err)
+        Error.captureStackTrace(err, fatal)
+      }
+      console.error(err.stack)
+    } else if (typeof err == 'string') {
+      console.error(log.red('Error: ') + err)
+    } else {
+      console.error(log.red(err.name + ': ') + err.message)
+      if (err.code == 500) {
+        log('Run', log.cyan('wch logs'), 'for the stack trace.')
+        log()
+        warn('Please file an issue at:', 'https://goo.gl/GgBmdC')
+      }
+    }
+    process.exit()
+  }
+})
+
+try {
+  let cmd = args[2]
+  require('./cli/' + cmd)()
+} catch(err) {
+  if (err.code == 'MODULE_NOT_FOUND') {
+    require('./cli/default')()
+  } else {
+    throw err
+  }
+}
