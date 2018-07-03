@@ -1,4 +1,4 @@
-# wchd v0.9.0
+# wchd v0.9.1
 
 **Extensible watcher daemon** (powered by [fb-watchman][1])
 
