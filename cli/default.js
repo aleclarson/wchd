@@ -19,9 +19,9 @@ module.exports = async function() {
         fatal('Cannot use -f on multiple roots')
       }
       let root = path.resolve(args[0])
-      let watcher = require('../lib/watcher')
-      return watcher.start().then(async () => {
-        await watcher.watch(root)
+      let {connect, watch} = require('..')
+      return connect().then(async () => {
+        await watch(root)
         good('Watching...')
       }).catch(fatal)
     }
