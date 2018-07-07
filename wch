@@ -40,13 +40,11 @@ Object.assign(global, {
   }
 })
 
+let cmd = './cli/' + args[2]
 try {
-  let cmd = args[2]
-  require('./cli/' + cmd)()
+  require.resolve(cmd)
 } catch(err) {
-  if (err.code == 'MODULE_NOT_FOUND') {
-    require('./cli/default')()
-  } else {
-    throw err
-  }
+  cmd = './cli/default'
 }
+
+require(cmd)()
