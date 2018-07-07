@@ -36,7 +36,7 @@ Object.assign(global, {
         warn('Please file an issue at:', 'https://goo.gl/GgBmdC')
       }
     }
-    process.exit()
+    process.exit(1)
   }
 })
 
