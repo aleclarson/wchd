@@ -27,7 +27,7 @@ Object.assign(global, {
       }
       console.error(err.stack)
     } else if (typeof err == 'string') {
-      console.error(log.red('Error: ') + err)
+      console.error(log.red('error: ') + err)
     } else {
       console.error(log.red(err.name + ': ') + err.message)
       if (err.code == 500) {
