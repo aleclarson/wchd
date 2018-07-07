@@ -1,5 +1,5 @@
 let quest = require('quest')
-let sock = require('wch/sock')
+let sock = require('wch/lib/sock')
 let fs = require('fsx')
 
 let {WCH_DIR, SOCK_PATH} = require('../paths')
