@@ -10,6 +10,9 @@ module.exports = async function() {
     v: true, // verbose
   })
 
+  wch.on('offline', () => fatal('wchd is unreachable'))
+  await wch.connect()
+
   // first arg is "." or ".." or starts with "./" or "../"
   let relativeRE = /^\.\.?(\/[^ ]*)?( |$)/
   if (relativeRE.test(args._)) {
@@ -45,19 +48,20 @@ module.exports = async function() {
       }
     }
     if (!args.u) {
-      return
+      process.exit()
     }
   }
   else if (!args._.startsWith('-u')) {
     fatal('Unrecognized command')
   }
-  args.u.forEach(root => {
+  await Promise.all(args.u.map(root => {
     root = path.resolve(root)
-    wch.unwatch(root).then(success => {
+    return wch.unwatch(root).then(success => {
       if (success) good('Unwatched:', root)
       else warn('Not watching:', root)
     }).catch(fatal)
-  })
+  }))
+  process.exit()
 }
 
 // Restart a child process when files change.
