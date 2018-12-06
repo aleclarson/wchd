@@ -8,6 +8,12 @@
   "bin": {
     "wch": "./wch"
   },
+  "files": [
+    "lib",
+    "cli",
+    "paths.js",
+    "wch"
+  ],
   "dependencies": {
     "clean-stack": "^1.3.0",
     "fb-watchman": "^2.0.0",
