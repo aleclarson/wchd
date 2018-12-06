@@ -25,6 +25,7 @@
     "readable-stream": "^2.3.6",
     "slurm": "^0.5.6",
     "slush": "aleclarson/slush#3.2.0",
+    "socket-events": "^1.2.0",
     "yiss": "^0.1.0"
   },
   "devDependencies": {

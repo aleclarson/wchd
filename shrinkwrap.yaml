@@ -9,11 +9,18 @@ dependencies:
   readable-stream: 2.3.6
   slurm: 0.5.6
   slush: github.com/aleclarson/slush/45febc16a274ceb5996b976bdd0f54b253031bd6
+  socket-events: 1.2.0
   yiss: 0.1.1
 devDependencies:
   coffeescript: 2.3.2
   testpass: 0.9.5
 packages:
+  /@cush/events/1.0.2:
+    dev: false
+    engines:
+      node: '>=6'
+    resolution:
+      integrity: sha512-daVKCMWlBcaQSMwWqnKGFtOgyAB45I4VPit+BVBKAUbEv/HOAfIhMwFqaFs7vSfHBdxXlFlbup3JZ9/ZOJgGEQ==
   /@cush/relative/0.0.1:
     dev: true
     resolution:
@@ -141,6 +148,12 @@ packages:
       node: '>=0.12.0'
     resolution:
       integrity: sha1-2l+T458IO7tO/S6/lSiu2HrnACg=
+  /is-stream/1.1.0:
+    dev: false
+    engines:
+      node: '>=0.10.0'
+    resolution:
+      integrity: sha1-EtSj3U5o4Lec6428hBc66A2RykQ=
   /isarray/1.0.0:
     dev: false
     resolution:
@@ -220,6 +233,15 @@ packages:
     dev: false
     resolution:
       integrity: sha512-gPtinIcWOEqu/+Fo7AxxleMm8z5usUCfOTLB5mNSzuUkl1w1NAs1ctxdsDV6vo8Zh4hyCBt9GAbJiJO5NBOgmA==
+  /socket-events/1.2.0:
+    dependencies:
+      '@cush/events': 1.0.2
+      is-stream: 1.1.0
+    dev: false
+    engines:
+      node: '>=6'
+    resolution:
+      integrity: sha512-8PJir0Dls4Exyd3k6hEPqAq6lOJtzzbvsLTY8Wg5JiHQRVdNBGyPva1xgHW4xzZ7DiJX2/8DW5B0X65gSe9Iuw==
   /source-map-support/0.5.9:
     dependencies:
       buffer-from: 1.1.1
@@ -415,5 +437,6 @@ specifiers:
   readable-stream: ^2.3.6
   slurm: ^0.5.6
   slush: 'github:aleclarson/slush#3.2.0'
+  socket-events: ^1.2.0
   testpass: ^0.9.1
   yiss: ^0.1.0
