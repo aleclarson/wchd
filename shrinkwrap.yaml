@@ -1,5 +1,14 @@
 dependencies:
+  clean-stack: 1.3.0
+  fb-watchman: 2.0.0
+  fsx: github.com/aleclarson/fsx/1035d83ed902bf8d6e05aaf558444c8d87eb5e13
+  lodge: 0.0.7
   nanoid: 1.3.4
+  noop: github.com/aleclarson/noop/2336939ed0e4d7aa7a09649c39c0d1b6828fdbf0
+  on-write: github.com/aleclarson/on-write/1771e2b4493dcfa9df7e6149e79f42009a676811
+  readable-stream: 2.3.6
+  slush: github.com/aleclarson/slush/45febc16a274ceb5996b976bdd0f54b253031bd6
+  yiss: 0.1.1
 devDependencies:
   coffeescript: 2.3.2
   testpass: 0.9.5
@@ -9,7 +18,6 @@ packages:
     resolution:
       integrity: sha512-Wm53WUnUy3CFveO5SecDyQZH4uuNG925DzyS0/tNyOE7T2a9liCU6vw+aIzCv7pyv6shkHZ0HGYxWicLi8dDow==
   /ansi-256-colors/1.1.0:
-    dev: true
     engines:
       node: '>=0.10.0'
     resolution:
@@ -32,12 +40,17 @@ packages:
     dev: true
     resolution:
       integrity: sha512-P7qGFGtCaxVREQQlgJy9CllRW+p2lw5HrCuBDrEKL7BdfOMIVRF2vdsT70NaXry9zYFyKbDCcjaz6ewapktIwA==
+  /bser/2.0.0:
+    dependencies:
+      node-int64: 0.4.0
+    dev: false
+    resolution:
+      integrity: sha1-mseNPtXZFYBP2HrLFYvHlxR6Fxk=
   /buffer-from/1.1.1:
     dev: true
     resolution:
       integrity: sha512-MQcXEUbCKtEo7bhqEs6560Hyd4XaovZlO/k9V3hjVUF/zwW7KBVdSK4gIt/bzwS9MbR5qob+F5jusZsb0YQK2A==
   /clean-stack/1.3.0:
-    dev: true
     engines:
       node: '>=4'
     resolution:
@@ -49,28 +62,135 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-YObiFDoukx7qPBi/K0kUKyntEZDfBQiqs/DbrR1xzASKOBjGT7auD85/DiPeRr9k++lRj7l3uA9TNMLfyfcD/Q==
+  /core-util-is/1.0.2:
+    dev: false
+    resolution:
+      integrity: sha1-tf1UIgqivFq1eqtxQMlAdUUDwac=
   /dequals/0.0.1:
     dev: true
     resolution:
       integrity: sha512-OTkWpUXwIcuCXK7Y2jErfj7iOMaAxItzt/JqketjyPbayFfdfTb/uc0aI6v7Ocl6gF02Mbh/fV3voWxeDY6Ksw==
+  /encodeurl/1.0.2:
+    dev: false
+    engines:
+      node: '>= 0.8'
+    resolution:
+      integrity: sha1-rT/0yG7C0CkyL1oCw6mmBslbP1k=
+  /escape-html/1.0.3:
+    dev: false
+    resolution:
+      integrity: sha1-Aljq5NPQwJdN4cFpGI7wBR0dGYg=
+  /etag/1.8.1:
+    dev: false
+    engines:
+      node: '>= 0.6'
+    resolution:
+      integrity: sha1-Qa4u62XvpiJorr/qg6x9eSmbCIc=
+  /fb-watchman/2.0.0:
+    dependencies:
+      bser: 2.0.0
+    dev: false
+    resolution:
+      integrity: sha1-VOmr99+i8mzZsWNsWIwa/AXeXVg=
+  /forwarded/0.1.2:
+    dev: false
+    engines:
+      node: '>= 0.6'
+    resolution:
+      integrity: sha1-mMI9qxF1ZXuMBXPozszZGw/xjIQ=
+  /fresh/0.5.2:
+    dev: false
+    engines:
+      node: '>= 0.6'
+    resolution:
+      integrity: sha1-PYyt2Q2XZWn6g1qx+OSyOhBWBac=
   /glob-regex/0.2.2:
-    dev: true
     resolution:
       integrity: sha512-3dzg5vt7G9beHqsqpJpMvdMZ+BRNPc9zC312pg3ew3PwtFq4jDeLu7QnJOCoQ3lbrkKAxpRkKDvSi1A9RxgzwA==
   /glob-regex/0.3.2:
     dev: true
     resolution:
       integrity: sha512-m5blUd3/OqDTWwzBBtWBPrGlAzatRywHameHeekAZyZrskYouOGdNB8T/q6JucucvJXtOuyHIn0/Yia7iDasDw==
+  /has-flag/3.0.0:
+    dev: false
+    engines:
+      node: '>=4'
+    resolution:
+      integrity: sha1-tdRU3CGZriJWmfNGfloH87lVuv0=
+  /inherits/2.0.3:
+    dev: false
+    resolution:
+      integrity: sha1-Yzwsg+PaQqUC9SRmAiSA9CCCYd4=
+  /ipaddr.js/1.4.0:
+    dev: false
+    engines:
+      node: '>= 0.10'
+    resolution:
+      integrity: sha1-KWrKh4qCGBbluF0KKFqZvP9FgvA=
   /is-set/1.0.0:
     dev: true
     engines:
       node: '>=0.12.0'
     resolution:
       integrity: sha1-2l+T458IO7tO/S6/lSiu2HrnACg=
+  /isarray/1.0.0:
+    dev: false
+    resolution:
+      integrity: sha1-u5NdSFgsuhaMBoNJV6VKPgcSTxE=
+  /lodge/0.0.7:
+    dependencies:
+      ansi-256-colors: 1.1.0
+      has-flag: 3.0.0
+    dev: false
+    resolution:
+      integrity: sha512-iM/FlCXSRwOVZhgpNI7RMWunG7SlTMY3nzOQjr0PcOZnTnphmsD1S2X1CeRGcClHjuOB9L3IQFCpYXGB4kCHNg==
   /nanoid/1.3.4:
     dev: false
     resolution:
       integrity: sha512-4ug4BsuHxiVHoRUe1ud6rUFT3WUMmjXt1W0quL0CviZQANdan7D8kqN5/maw53hmAApY/jfzMRkC57BNNs60ZQ==
+  /node-int64/0.4.0:
+    dev: false
+    resolution:
+      integrity: sha1-h6kGXNs1XTGC2PlM4RGIuCXGijs=
+  /parseurl/1.3.2:
+    dev: false
+    engines:
+      node: '>= 0.8'
+    resolution:
+      integrity: sha1-/CidTtiZMRlGDBViUyYs3I3mW/M=
+  /performance-now/2.1.0:
+    dev: false
+    resolution:
+      integrity: sha1-Ywn04OX6kT7BxpMHrjZLSzd8nns=
+  /process-nextick-args/2.0.0:
+    dev: false
+    resolution:
+      integrity: sha512-MtEC1TqN0EU5nephaJ4rAtThHtC86dNN9qCuEhtshvpVBkAW5ZO7BASN9REnF9eoXGcRub+pFuKEpOHE+HbEMw==
+  /proxy-addr/1.1.5:
+    dependencies:
+      forwarded: 0.1.2
+      ipaddr.js: 1.4.0
+    dev: false
+    engines:
+      node: '>= 0.6'
+    resolution:
+      integrity: sha1-ccDuOxAt4/IC87ZPYI0XP8uhqRg=
+  /read-body/0.0.1:
+    dev: false
+    resolution:
+      integrity: sha512-ReZitw6wR98zPrhN6kpMzVWMph2k86syE6zC4XOjn7TNtbetD4WuKnCyu0OFPodEeZpqMJtlF0rjkZTAdxYQBg==
+  /readable-stream/2.3.6:
+    dependencies:
+      core-util-is: 1.0.2
+      inherits: 2.0.3
+      isarray: 1.0.0
+      process-nextick-args: 2.0.0
+      safe-buffer: 5.1.2
+      string_decoder: 1.1.1
+      util-deprecate: 1.0.2
+    dev: false
+    resolution:
+      integrity: sha512-tQtKA9WIAhBF3+VLAseyMqZeBjW0AHJoxOtYqSUZNJxauErmLbVm2FW1y+J/YA9dUrAC39ITejlZWhVIwawkKw==
   /recrawl/0.0.2:
     dependencies:
       '@cush/relative': 0.0.1
@@ -78,6 +198,10 @@ packages:
     dev: true
     resolution:
       integrity: sha512-pkBjvVtPjE1qKegDqsnqokU3a43dGaj021TW1EzRanTW+cZSWb5wmaCjoBNvZzALD6mr9EK/qlhNTsnHeFPsfw==
+  /safe-buffer/5.1.2:
+    dev: false
+    resolution:
+      integrity: sha512-Gd2UZBJDkXlY7GbJxfsE8/nvKkUEU1G38c1siN6QP6a9PT9MmHB8GnpscSmMJSoF8LOIrt8ud/wPtojys4G6+g==
   /slurm/0.3.0:
     dependencies:
       huey: github.com/aleclarson/huey/b9806b6bfb38f5c0175d970d20881abe09978a42
@@ -97,6 +221,18 @@ packages:
       node: '>=0.10.0'
     resolution:
       integrity: sha512-UjgapumWlbMhkBgzT7Ykc5YXUT46F0iKu8SGXq0bcwP5dz/h0Plj6enJqjz1Zbq2l5WaqYnrVbwWOWMyF3F47g==
+  /statuses/1.5.0:
+    dev: false
+    engines:
+      node: '>= 0.6'
+    resolution:
+      integrity: sha1-Fhx9rBd2Wf2YEfQ3cfqZOBR4Yow=
+  /string_decoder/1.1.1:
+    dependencies:
+      safe-buffer: 5.1.2
+    dev: false
+    resolution:
+      integrity: sha512-n/ShnvDi6FHbbVfviro+WojiFzv+s8MPMHBczVePfUpDJLwoLT0ht1l4YwBCbi8pJAveEEdnkHyPyTP/mzRfwg==
   /testpass/0.9.5:
     dependencies:
       ansi-bold: 0.1.1
@@ -113,6 +249,57 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-ZKXwMwXlOPq0BaAou9gfjXt92BjueoBvHibZetDWiZy01LxoZRmY4hanF/0eHy+bq/IotfeFX/yV6pjRUKJW8Q==
+  /util-deprecate/1.0.2:
+    dev: false
+    resolution:
+      integrity: sha1-RQ1Nyfpw3nMnYvvS1KKJgUGaDM8=
+  /vary/1.1.2:
+    dev: false
+    engines:
+      node: '>= 0.8'
+    resolution:
+      integrity: sha1-IpnwLG3tMNSllhsLn3RSShj2NPw=
+  /wrap-defaults/0.0.1:
+    dev: false
+    resolution:
+      integrity: sha512-zXvt6/5GOZsjMXAP1PP9v0GmAIny5M64p+MHBFBWpVHhdahWvQOiMq2mloxNIVzPT/u9VErUkm5t6k92OMYarw==
+  /yiss/0.1.1:
+    dependencies:
+      assertValid: github.com/aleclarson/assertValid/f74989f0a2307ede88dd93291d8d412905d0ffd2
+      glob-regex: 0.2.2
+      isValid: github.com/aleclarson/isValid/03935f0b397d12aa05622bc5cae393e8969894ca
+      noop: github.com/aleclarson/noop/2336939ed0e4d7aa7a09649c39c0d1b6828fdbf0
+      sliceArray: github.com/aleclarson/sliceArray/fcc81c3bca424c37154e842a24c30ab9b549e960
+      valido: github.com/aleclarson/valido/dbaf5bbf5c2a32b0a31f118a6f6c38eab1859d36
+    dev: false
+    resolution:
+      integrity: sha512-Z0tXB0lo0PA9Guz5GFqwG1sYbv/ebIN3vQ3H0K+O2szM0ofXTdrPVF+YYkYkg+t+V37a/ZbpOdcM/QpTbjWutg==
+  github.com/aleclarson/assertValid/f74989f0a2307ede88dd93291d8d412905d0ffd2:
+    dependencies:
+      valido: github.com/aleclarson/valido/dbaf5bbf5c2a32b0a31f118a6f6c38eab1859d36
+    dev: false
+    name: assertValid
+    resolution:
+      tarball: 'https://codeload.github.com/aleclarson/assertValid/tar.gz/f74989f0a2307ede88dd93291d8d412905d0ffd2'
+    version: 1.0.1
+  github.com/aleclarson/emptyFunction/4423b3a7b7451a1df201cf2a634f69ec378c7faf:
+    dev: false
+    name: emptyFunction
+    resolution:
+      tarball: 'https://codeload.github.com/aleclarson/emptyFunction/tar.gz/4423b3a7b7451a1df201cf2a634f69ec378c7faf'
+    version: 1.0.0
+  github.com/aleclarson/fsx/1035d83ed902bf8d6e05aaf558444c8d87eb5e13:
+    dev: false
+    name: fsx
+    resolution:
+      tarball: 'https://codeload.github.com/aleclarson/fsx/tar.gz/1035d83ed902bf8d6e05aaf558444c8d87eb5e13'
+    version: 1.9.0
+  github.com/aleclarson/getProto/7d8b5c299dc9ae708679febb8026c48b6da1ada3:
+    dev: false
+    name: getProto
+    resolution:
+      tarball: 'https://codeload.github.com/aleclarson/getProto/tar.gz/7d8b5c299dc9ae708679febb8026c48b6da1ada3'
+    version: 1.0.0
   github.com/aleclarson/huey/6b7342a0e91a2a21674899ad5ed8362ff5d8dc69:
     dependencies:
       ansi-256-colors: 1.1.0
@@ -129,6 +316,78 @@ packages:
     resolution:
       tarball: 'https://codeload.github.com/aleclarson/huey/tar.gz/b9806b6bfb38f5c0175d970d20881abe09978a42'
     version: 0.1.0
+  github.com/aleclarson/isObject/0f3b3b60583196ca05936192e906e1f76c50f5d8:
+    dependencies:
+      getProto: github.com/aleclarson/getProto/7d8b5c299dc9ae708679febb8026c48b6da1ada3
+    dev: false
+    name: isObject
+    resolution:
+      tarball: 'https://codeload.github.com/aleclarson/isObject/tar.gz/0f3b3b60583196ca05936192e906e1f76c50f5d8'
+    version: 1.0.0
+  github.com/aleclarson/isValid/03935f0b397d12aa05622bc5cae393e8969894ca:
+    dependencies:
+      valido: github.com/aleclarson/valido/dbaf5bbf5c2a32b0a31f118a6f6c38eab1859d36
+    dev: false
+    name: isValid
+    resolution:
+      tarball: 'https://codeload.github.com/aleclarson/isValid/tar.gz/03935f0b397d12aa05622bc5cae393e8969894ca'
+    version: 1.0.1
+  github.com/aleclarson/noop/2336939ed0e4d7aa7a09649c39c0d1b6828fdbf0:
+    dev: false
+    name: noop
+    resolution:
+      tarball: 'https://codeload.github.com/aleclarson/noop/tar.gz/2336939ed0e4d7aa7a09649c39c0d1b6828fdbf0'
+    version: 0.0.1
+  github.com/aleclarson/on-write/1771e2b4493dcfa9df7e6149e79f42009a676811:
+    dev: false
+    name: on-write
+    resolution:
+      tarball: 'https://codeload.github.com/aleclarson/on-write/tar.gz/1771e2b4493dcfa9df7e6149e79f42009a676811'
+    version: 0.0.1
+  github.com/aleclarson/setProto/714620967ffc1270f6c19025cee0026a4474de40:
+    dev: false
+    name: setProto
+    resolution:
+      tarball: 'https://codeload.github.com/aleclarson/setProto/tar.gz/714620967ffc1270f6c19025cee0026a4474de40'
+    version: 1.0.1
+  github.com/aleclarson/sliceArray/fcc81c3bca424c37154e842a24c30ab9b549e960:
+    dev: false
+    name: sliceArray
+    resolution:
+      tarball: 'https://codeload.github.com/aleclarson/sliceArray/tar.gz/fcc81c3bca424c37154e842a24c30ab9b549e960'
+    version: 1.0.0
+  github.com/aleclarson/slush/45febc16a274ceb5996b976bdd0f54b253031bd6:
+    dependencies:
+      assertValid: github.com/aleclarson/assertValid/f74989f0a2307ede88dd93291d8d412905d0ffd2
+      emptyFunction: github.com/aleclarson/emptyFunction/4423b3a7b7451a1df201cf2a634f69ec378c7faf
+      encodeurl: 1.0.2
+      escape-html: 1.0.3
+      etag: 1.8.1
+      fresh: 0.5.2
+      isValid: github.com/aleclarson/isValid/03935f0b397d12aa05622bc5cae393e8969894ca
+      parseurl: 1.3.2
+      performance-now: 2.1.0
+      proxy-addr: 1.1.5
+      read-body: 0.0.1
+      setProto: github.com/aleclarson/setProto/714620967ffc1270f6c19025cee0026a4474de40
+      statuses: 1.5.0
+      valido: github.com/aleclarson/valido/dbaf5bbf5c2a32b0a31f118a6f6c38eab1859d36
+      vary: 1.1.2
+      wrap-defaults: 0.0.1
+    dev: false
+    name: slush
+    resolution:
+      tarball: 'https://codeload.github.com/aleclarson/slush/tar.gz/45febc16a274ceb5996b976bdd0f54b253031bd6'
+    version: 3.2.0
+  github.com/aleclarson/valido/dbaf5bbf5c2a32b0a31f118a6f6c38eab1859d36:
+    dependencies:
+      isObject: github.com/aleclarson/isObject/0f3b3b60583196ca05936192e906e1f76c50f5d8
+      setProto: github.com/aleclarson/setProto/714620967ffc1270f6c19025cee0026a4474de40
+    dev: false
+    name: valido
+    resolution:
+      tarball: 'https://codeload.github.com/aleclarson/valido/tar.gz/dbaf5bbf5c2a32b0a31f118a6f6c38eab1859d36'
+    version: 1.1.4
 registry: 'https://registry.npmjs.org/'
 shrinkwrapMinorVersion: 9
 shrinkwrapVersion: 3
@@ -136,7 +395,7 @@ specifiers:
   clean-stack: ^1.3.0
   coffeescript: ^2.3.0
   fb-watchman: ^2.0.0
-  fsx: 'github:aleclarson/fsx#1.8.0'
+  fsx: 'github:aleclarson/fsx#1.9.0'
   lodge: ^0.0.7
   nanoid: ^1.3.4
   noop: 'github:aleclarson/noop#0.0.1'
