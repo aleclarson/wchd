@@ -7,6 +7,7 @@ dependencies:
   noop: github.com/aleclarson/noop/2336939ed0e4d7aa7a09649c39c0d1b6828fdbf0
   on-write: github.com/aleclarson/on-write/1771e2b4493dcfa9df7e6149e79f42009a676811
   readable-stream: 2.3.6
+  slurm: 0.5.6
   slush: github.com/aleclarson/slush/45febc16a274ceb5996b976bdd0f54b253031bd6
   yiss: 0.1.1
 devDependencies:
@@ -215,6 +216,10 @@ packages:
     dev: true
     resolution:
       integrity: sha512-r4xmBj1LUNZjsRlArqMo5aUUW9MWH2FViZYgsvQ+VU7cHwXFodIRryC8djKz8O9HRn5yxR1KweB/C7TOCTbUqw==
+  /slurm/0.5.6:
+    dev: false
+    resolution:
+      integrity: sha512-gPtinIcWOEqu/+Fo7AxxleMm8z5usUCfOTLB5mNSzuUkl1w1NAs1ctxdsDV6vo8Zh4hyCBt9GAbJiJO5NBOgmA==
   /source-map-support/0.5.9:
     dependencies:
       buffer-from: 1.1.1
@@ -408,6 +413,7 @@ specifiers:
   noop: 'github:aleclarson/noop#0.0.1'
   on-write: 'github:aleclarson/on-write#0.0.1'
   readable-stream: ^2.3.6
+  slurm: ^0.5.6
   slush: 'github:aleclarson/slush#3.2.0'
   testpass: ^0.9.1
   yiss: ^0.1.0
