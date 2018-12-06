@@ -21,8 +21,8 @@
     "yiss": "^0.1.0"
   },
   "devDependencies": {
-    "coffeescript": "^2.3.0",
-    "testpass": "^0.9.1"
+    "coffeescript": "2.3.2",
+    "testpass": "0.9.5"
   },
   "peerDependencies": {
     "wch": "^0.10.0"
