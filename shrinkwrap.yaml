@@ -1,4 +1,5 @@
 dependencies:
+  '@aleclarson/quest': 0.9.0
   clean-stack: 2.0.0
   fb-watchman: 2.0.0
   fsx: github.com/aleclarson/fsx/d3dd823367a00a93b58106f5ea13138618f799e3
@@ -14,6 +15,12 @@ dependencies:
   wch: 0.10.2
   yiss: 0.1.1
 packages:
+  /@aleclarson/quest/0.9.0:
+    dependencies:
+      readable-stream: 2.3.6
+    dev: false
+    resolution:
+      integrity: sha512-5H4/64usRi4yAx7lHav7nn592pUFFNZNp0XgnjBmPEausZU/EBk4XuVJGS4wofeaGPSwbfjX5n2Bk5RxCu1PBQ==
   /@cush/events/1.0.2:
     dev: false
     engines:
@@ -348,6 +355,7 @@ registry: 'https://registry.npmjs.org/'
 shrinkwrapMinorVersion: 9
 shrinkwrapVersion: 3
 specifiers:
+  '@aleclarson/quest': ^0.9.0
   clean-stack: ^2.0.0
   fb-watchman: ^2.0.0
   fsx: 'github:aleclarson/fsx#1.8.0'

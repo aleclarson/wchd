@@ -1,4 +1,4 @@
-let quest = require('quest')
+let quest = require('@aleclarson/quest')
 let sock = require('wch/lib/sock')
 let fs = require('fsx')
 
