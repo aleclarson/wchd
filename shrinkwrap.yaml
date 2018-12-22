@@ -7,9 +7,9 @@ dependencies:
   nanoid: 1.3.4
   noop: github.com/aleclarson/noop/2336939ed0e4d7aa7a09649c39c0d1b6828fdbf0
   on-write: github.com/aleclarson/on-write/1771e2b4493dcfa9df7e6149e79f42009a676811
-  readable-stream: 2.3.6
+  readable-stream: 3.1.0
   slurm: 0.5.6
-  slush: github.com/aleclarson/slush/45febc16a274ceb5996b976bdd0f54b253031bd6
+  slush: github.com/aleclarson/slush/2c9fea737f718fe5ea7f5353ffa4babe4ebae951
   socket-events: 1.2.0
   unhandled: github.com/aleclarson/unhandled/0af6db418579cd47e3069f9d61e9ec7f378f78c7
   wch: 0.10.2
@@ -174,6 +174,16 @@ packages:
     dev: false
     resolution:
       integrity: sha512-tQtKA9WIAhBF3+VLAseyMqZeBjW0AHJoxOtYqSUZNJxauErmLbVm2FW1y+J/YA9dUrAC39ITejlZWhVIwawkKw==
+  /readable-stream/3.1.0:
+    dependencies:
+      inherits: 2.0.3
+      string_decoder: 1.2.0
+      util-deprecate: 1.0.2
+    dev: false
+    engines:
+      node: '>= 6'
+    resolution:
+      integrity: sha512-vpydAvIJvPODZNagCPuHG87O9JNPtvFEtjHHRVwNVsVVRBqemvPJkc2SYbxJsiZXawJdtZNmkmnsPuE3IgsG0A==
   /safe-buffer/5.1.2:
     dev: false
     resolution:
@@ -203,6 +213,12 @@ packages:
     dev: false
     resolution:
       integrity: sha512-n/ShnvDi6FHbbVfviro+WojiFzv+s8MPMHBczVePfUpDJLwoLT0ht1l4YwBCbi8pJAveEEdnkHyPyTP/mzRfwg==
+  /string_decoder/1.2.0:
+    dependencies:
+      safe-buffer: 5.1.2
+    dev: false
+    resolution:
+      integrity: sha512-6YqyX6ZWEYguAxgZzHGL7SsCeGx3V2TtOTqZz1xSTSWnqsbWwbptafNyvf/ACquZUXV3DANr5BDIwNYe1mN42w==
   /util-deprecate/1.0.2:
     dev: false
     resolution:
@@ -313,7 +329,7 @@ packages:
     resolution:
       tarball: 'https://codeload.github.com/aleclarson/sliceArray/tar.gz/fcc81c3bca424c37154e842a24c30ab9b549e960'
     version: 1.0.0
-  github.com/aleclarson/slush/45febc16a274ceb5996b976bdd0f54b253031bd6:
+  github.com/aleclarson/slush/2c9fea737f718fe5ea7f5353ffa4babe4ebae951:
     dependencies:
       assertValid: github.com/aleclarson/assertValid/f74989f0a2307ede88dd93291d8d412905d0ffd2
       emptyFunction: github.com/aleclarson/emptyFunction/4423b3a7b7451a1df201cf2a634f69ec378c7faf
@@ -334,8 +350,8 @@ packages:
     dev: false
     name: slush
     resolution:
-      tarball: 'https://codeload.github.com/aleclarson/slush/tar.gz/45febc16a274ceb5996b976bdd0f54b253031bd6'
-    version: 3.2.0
+      tarball: 'https://codeload.github.com/aleclarson/slush/tar.gz/2c9fea737f718fe5ea7f5353ffa4babe4ebae951'
+    version: 3.2.1
   github.com/aleclarson/unhandled/0af6db418579cd47e3069f9d61e9ec7f378f78c7:
     dev: false
     name: unhandled
@@ -363,9 +379,9 @@ specifiers:
   nanoid: ^1.3.4
   noop: 'github:aleclarson/noop#0.0.1'
   on-write: 'github:aleclarson/on-write#0.0.1'
-  readable-stream: ^2.3.6
+  readable-stream: ^3.0.0
   slurm: ^0.5.6
-  slush: 'github:aleclarson/slush#3.2.0'
+  slush: 'github:aleclarson/slush#3.2.1'
   socket-events: ^1.2.0
   unhandled: 'github:aleclarson/unhandled#1.0.0'
   wch: ^0.10.0
