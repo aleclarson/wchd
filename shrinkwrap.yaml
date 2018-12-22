@@ -10,6 +10,7 @@ dependencies:
   slurm: 0.5.6
   slush: github.com/aleclarson/slush/45febc16a274ceb5996b976bdd0f54b253031bd6
   socket-events: 1.2.0
+  unhandled: github.com/aleclarson/unhandled/0af6db418579cd47e3069f9d61e9ec7f378f78c7
   yiss: 0.1.1
 devDependencies:
   coffeescript: 2.3.2
@@ -413,6 +414,12 @@ packages:
     resolution:
       tarball: 'https://codeload.github.com/aleclarson/slush/tar.gz/45febc16a274ceb5996b976bdd0f54b253031bd6'
     version: 3.2.0
+  github.com/aleclarson/unhandled/0af6db418579cd47e3069f9d61e9ec7f378f78c7:
+    dev: false
+    name: unhandled
+    resolution:
+      tarball: 'https://codeload.github.com/aleclarson/unhandled/tar.gz/0af6db418579cd47e3069f9d61e9ec7f378f78c7'
+    version: 1.0.0
   github.com/aleclarson/valido/dbaf5bbf5c2a32b0a31f118a6f6c38eab1859d36:
     dependencies:
       isObject: github.com/aleclarson/isObject/0f3b3b60583196ca05936192e906e1f76c50f5d8
@@ -439,4 +446,5 @@ specifiers:
   slush: 'github:aleclarson/slush#3.2.0'
   socket-events: ^1.2.0
   testpass: ^0.9.1
+  unhandled: 'github:aleclarson/unhandled#1.0.0'
   yiss: ^0.1.0
