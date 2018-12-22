@@ -29,10 +29,6 @@
     "unhandled": "aleclarson/unhandled#1.0.0",
     "yiss": "^0.1.0"
   },
-  "devDependencies": {
-    "coffeescript": "^2.3.0",
-    "testpass": "^0.9.1"
-  },
   "peerDependencies": {
     "wch": "^0.10.0"
   }
