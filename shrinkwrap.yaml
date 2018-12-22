@@ -2,7 +2,7 @@ dependencies:
   clean-stack: 2.0.0
   fb-watchman: 2.0.0
   fsx: github.com/aleclarson/fsx/d3dd823367a00a93b58106f5ea13138618f799e3
-  lodge: 0.0.7
+  lodge: 0.1.1
   nanoid: 1.3.4
   noop: github.com/aleclarson/noop/2336939ed0e4d7aa7a09649c39c0d1b6828fdbf0
   on-write: github.com/aleclarson/on-write/1771e2b4493dcfa9df7e6149e79f42009a676811
@@ -159,13 +159,13 @@ packages:
     dev: false
     resolution:
       integrity: sha1-u5NdSFgsuhaMBoNJV6VKPgcSTxE=
-  /lodge/0.0.7:
+  /lodge/0.1.1:
     dependencies:
       ansi-256-colors: 1.1.0
       has-flag: 3.0.0
     dev: false
     resolution:
-      integrity: sha512-iM/FlCXSRwOVZhgpNI7RMWunG7SlTMY3nzOQjr0PcOZnTnphmsD1S2X1CeRGcClHjuOB9L3IQFCpYXGB4kCHNg==
+      integrity: sha512-nMrW5NrSrJ7eFdDk2T0M4yJ/KASNvR3J59m6Wir3I8dy4Z8TTCNF0avAbnUAHYqKohn0ErmOWlkhiXjHuZtIpQ==
   /nanoid/1.3.4:
     dev: false
     resolution:
@@ -437,7 +437,7 @@ specifiers:
   coffeescript: ^2.3.0
   fb-watchman: ^2.0.0
   fsx: 'github:aleclarson/fsx#1.8.0'
-  lodge: ^0.0.7
+  lodge: ^0.1.1
   nanoid: ^1.3.4
   noop: 'github:aleclarson/noop#0.0.1'
   on-write: 'github:aleclarson/on-write#0.0.1'
