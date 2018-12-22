@@ -27,9 +27,7 @@
     "slush": "aleclarson/slush#3.2.0",
     "socket-events": "^1.2.0",
     "unhandled": "aleclarson/unhandled#1.0.0",
+    "wch": "^0.10.0",
     "yiss": "^0.1.0"
-  },
-  "peerDependencies": {
-    "wch": "^0.10.0"
   }
 }
