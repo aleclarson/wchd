@@ -1,6 +1,6 @@
 {
   "name": "wchd",
-  "version": "0.10.2",
+  "version": "0.10.3",
   "main": "lib/index.js",
   "license": "MIT",
   "repository": "https://github.com/aleclarson/wchd.git",
