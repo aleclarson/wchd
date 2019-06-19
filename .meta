@@ -1,0 +1,5 @@
+{
+  "projects": {
+    "packages/wch": "https://github.com/aleclarson/wch.git"
+  }
+}
