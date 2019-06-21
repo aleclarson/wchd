@@ -1,0 +1,31 @@
+{
+	"folders": [
+		{
+			"path": "packages/wch"
+		},
+		{
+			"path": "packages/wch-babel"
+		},
+		{
+			"path": "packages/wch-cara"
+		},
+		{
+			"path": "packages/wch-coffee"
+		},
+		{
+			"path": "packages/wch-cush"
+		},
+		{
+			"path": "packages/wch-moon"
+		},
+		{
+			"path": "packages/wch-pug"
+		},
+		{
+			"path": "packages/wch-typescript"
+		},
+		{
+			"path": "."
+		}
+	]
+}
